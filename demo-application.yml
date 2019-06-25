@@ -3,7 +3,7 @@ spring:
     active: dev # 激活开发环境配置
 ---
 server:
-  port: 5001
+  port: 3001
 spring:
   profiles: dev # 开发环境
   application:
@@ -22,7 +22,7 @@ eureka:
     preferIpAddress: true     #访问路径可以显示IP地址
 ---
 server:
-  port: 5001
+  port: 3001
 spring:
   profiles: test # 测试环境
   application:
