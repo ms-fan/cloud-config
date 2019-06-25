@@ -7,7 +7,7 @@ server:
 spring:
   profiles: dev # 开发环境
   application:
-    name: demo-bus
+    name: demo
 eureka:
   client:
     registerWithEureka: true # 服务注册开关
@@ -26,7 +26,7 @@ server:
 spring:
   profiles: test # 测试环境
   application:
-    name: demo-bus
+    name: demo
 eureka:
   client:
     registerWithEureka: true # 服务注册开关
