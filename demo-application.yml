@@ -3,11 +3,11 @@ spring:
     active: dev # 激活开发环境配置
 ---
 server:
-  port: 2001
+  port: 3001
 spring:
   profiles: dev # 开发环境
   application:
-    name: demo
+    name: demo-bus
 eureka:
   client:
     registerWithEureka: true # 服务注册开关
