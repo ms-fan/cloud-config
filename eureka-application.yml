@@ -25,7 +25,7 @@ eureka:
 server:
   port: 6002 # 服务端口
 spring:
-  profiles: prod # 生产环境
+  profiles: test # 生产环境
   application:
     name: eureka
 eureka:
