@@ -1,8 +1,8 @@
 server:
   session-timeout: 1800
-#    tomcat:
-#        max-threads: 1000
-#        min-spare-threads: 30
+  #    tomcat:
+  #        max-threads: 1000
+  #        min-spare-threads: 30
   port: 80
 #    uri-encoding: utf-8
 #security:
@@ -15,7 +15,7 @@ spring:
   jackson:
     time-zone: GMT+8
     date-format: yyyy-MM-dd HH:mm:ss
-  profiles: 
+  profiles:
     active: dev
   servlet:
     multipart:
@@ -48,6 +48,7 @@ logging:
     root: info
     com.bootdo: debug
 spring:
+  profiles: dev
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     driverClassName: com.mysql.jdbc.Driver
@@ -92,7 +93,18 @@ spring:
         max-active: 100
         # 连接池最大阻塞等待时间（使用负值表示没有限制）
         max-wait: -1
-        
+eureka:
+  client:
+    registerWithEureka: true # 服务注册开关
+    fetchRegistry: true # 服务发现开关
+    serviceUrl: # 客户端(服务提供者)注册到哪一个Eureka Server服务注册中心，多个用逗号分隔
+      # 单机版 Eureka 服务注册中心
+      #defaultZone: http://192.168.10.11:6001/eureka
+      # 集群版 Eureka 服务注册中心
+      defaultZone: http://192.168.10.11:6001/eureka
+  instance:
+    instanceId: ${spring.application.name}:${server.port} # 指定实例ID,就不会显示主机名了
+    preferIpAddress: true     #访问路径可以显示IP地址
 ---
 
 bootdo:
@@ -104,6 +116,7 @@ logging:
     root: error
     com.bootdo: info
 spring:
+  profiles: prod
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     driverClassName: com.mysql.jdbc.Driver
@@ -148,3 +161,15 @@ spring:
         max-active: 100
         # 连接池最大阻塞等待时间（使用负值表示没有限制）
         max-wait: -1
+eureka:
+  client:
+    registerWithEureka: true # 服务注册开关
+    fetchRegistry: true # 服务发现开关
+    serviceUrl: # 客户端(服务提供者)注册到哪一个Eureka Server服务注册中心，多个用逗号分隔
+      # 单机版 Eureka 服务注册中心
+      #defaultZone: http://192.168.10.11:6001/eureka
+      # 集群版 Eureka 服务注册中心
+      defaultZone: http://192.168.10.11:6001/eureka
+  instance:
+    instanceId: ${spring.application.name}:${server.port} # 指定实例ID,就不会显示主机名了
+    preferIpAddress: true     #访问路径可以显示IP地址
