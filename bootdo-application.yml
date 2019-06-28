@@ -40,7 +40,7 @@ mybatis:
 ---
 
 bootdo:
-  uploadPath: /home/ftpuser/www
+  uploadPath: /home/ftpuser/files
   username: admin
   password: 111111
 logging:
@@ -108,7 +108,7 @@ eureka:
 ---
 
 bootdo:
-  uploadPath: /home/ftpuser/www
+  uploadPath: /home/ftpuser/files
   username: test
   password: 111111
 logging:
