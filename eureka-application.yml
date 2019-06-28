@@ -11,7 +11,7 @@ spring:
     name: eureka
 eureka:
   instance:
-    hostname: localhost # eureka服务端的实例名称
+    hostname: 192.168.10.11 # eureka服务端的实例名称
   client:
     registerWithEureka: false # 服务注册，false表示不将自已注册到Eureka服务中
     fetchRegistry: false # 服务发现，false表示自己不从Eureka服务中获取注册信息
@@ -30,7 +30,7 @@ spring:
     name: eureka
 eureka:
   instance:
-    hostname: localhost # eureka服务端的实例名称
+    hostname: 192.168.10.11 # eureka服务端的实例名称
   client:
     registerWithEureka: false # 服务注册，false表示不将自已注册到Eureka服务中
     fetchRegistry: false # 服务发现，false表示自己不从Eureka服务中获取注册信息
