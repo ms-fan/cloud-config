@@ -77,9 +77,9 @@ spring:
     # 合并多个DruidDataSource的监控数据
     #useGlobalDataSourceStat: true
   redis:
-    host: localhost
+    host: 192.168.10.11
     port: 6379
-    password:
+    password: 123456
     # 连接超时时间（毫秒）
     timeout: 10000
     jedis:
@@ -133,9 +133,9 @@ spring:
     # 合并多个DruidDataSource的监控数据
     #useGlobalDataSourceStat: true
   redis:
-    host: localhost
+    host: 192.168.10.11
     port: 6379
-    password:
+    password: 123456
     # 连接超时时间（毫秒）
     timeout: 10000
     jedis:
