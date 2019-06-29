@@ -29,6 +29,10 @@ zuul:
       path: /demo/** # 访问路径
       serviceId: demo # 指定服务ID，会自动从Eureka中找到此服务的ip和端口
       stripPrefix: false # 代理转发时去掉前缀，false:代理转发时不去掉前缀 例如:为true时请求 /product/get/1，代理转发到/get/1
+    bootdo-product:    # 路由名称，名称任意，路由名称唯一
+      path: /bootdo/** # 访问路径
+      serviceId: bootdo # 指定服务ID，会自动从Eureka中找到此服务的ip和端口
+      stripPrefix: false # 代理转发时去掉前缀，false:代理转发时不去掉前缀 例如:为true时请求 /product/get/1，代理转发到/get/1
 
       # 如果多个服务需要经过路由，则同povider-product方式继续添加，例如：
       #provider-order:
@@ -65,6 +69,10 @@ zuul:
     demo-product:    # 路由名称，名称任意，路由名称唯一
       path: /demo/** # 访问路径
       serviceId: demo # 指定服务ID，会自动从Eureka中找到此服务的ip和端口
+      stripPrefix: false # 代理转发时去掉前缀，false:代理转发时不去掉前缀 例如:为true时请求 /product/get/1，代理转发到/get/1
+    bootdo-product:    # 路由名称，名称任意，路由名称唯一
+      path: /bootdo/** # 访问路径
+      serviceId: bootdo # 指定服务ID，会自动从Eureka中找到此服务的ip和端口
       stripPrefix: false # 代理转发时去掉前缀，false:代理转发时不去掉前缀 例如:为true时请求 /product/get/1，代理转发到/get/1
 
       # 如果多个服务需要经过路由，则同povider-product方式继续添加，例如：
