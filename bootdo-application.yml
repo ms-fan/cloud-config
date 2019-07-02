@@ -41,7 +41,7 @@ mybatis:
 bootdo:
   uploadPath: /home/ftpuser/www/files/
    #Ngnix_url
-  ngnixUrl: http://192.168.10.11:8088/files/
+  ngnixUrl: http://106.12.49.68/files/
   username: admin
   password: 111111
 logging:
@@ -111,7 +111,7 @@ eureka:
 bootdo:
   uploadPath: /home/ftpuser/www/files/
   #Ngnix_url
-  ngnixUrl: http://192.168.10.11:8088/files/
+  ngnixUrl: http://106.12.49.68/files/
   username: test
   password: 111111
 logging:
